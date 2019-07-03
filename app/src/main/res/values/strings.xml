@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GM Restaurant</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="self">Self</string>
+    <string name="message">Message</string>
+    <string name="error_happen">Error happen. Please try again!</string>
+    <string name="confirm">confirm</string>
+    <string name="close">close</string>
+    <string name="information">Information</string>
+    <string name="please_allow_permission_for_continuing">Please allow permission for continuing.</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="re_order">Re-order</string>
+    <string name="filter">Filter</string>
+
+    <string name="re_order_name">Name</string>
+    <string name="re_order_distance">Distance</string>
+
+    <string name="open">Open</string>
+    <string name="rating_more_than_1">Rating > 1</string>
+    <string name="rating_more_than_2">Rating > 2</string>
+    <string name="rating_more_than_3">Rating > 3</string>
+    <string name="rating_more_than_4">Rating > 4</string>
+
+</resources>

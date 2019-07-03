@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ListView
+        android:id="@+id/lv_name"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/v_line"
+        android:layout_alignStart="@+id/iv_expand"
+        android:layout_alignEnd="@+id/iv_expand"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/nameListMargin"
+        android:background="#48FA2B2B" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_alignStart="@+id/iv_expand"
+        android:layout_alignEnd="@+id/iv_expand"
+        android:layout_alignTop="@+id/iv_expand"
+        android:layout_alignBottom="@+id/iv_expand" />
+
+    <ImageView
+        android:id="@+id/iv_expand"
+        android:layout_width="200dp"
+        android:layout_height="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/nameListMargin"
+        android:layout_marginEnd="@dimen/nameListMargin"
+        android:src="@drawable/icon_arrow_bottom" />
+
+    <View
+        android:id="@+id/v_line"
+        style="@style/line"
+        android:layout_below="@+id/iv_expand"
+        android:layout_alignStart="@+id/iv_expand"
+        android:layout_alignEnd="@+id/iv_expand" />
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/elt_setting"
+        style="@style/expandViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line"
+        android:layout_alignStart="@+id/iv_expand"
+        android:layout_alignEnd="@+id/iv_expand"
+        android:layout_alignBottom="@+id/lv_name">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/standardLtt"
+                    android:id="@+id/llt_re_order"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/standardText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/re_order" />
+
+                    <ImageView
+                        android:id="@+id/iv_re_order_expand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_arrow_right_small" />
+
+                </LinearLayout>
+
+                <View style="@style/line" />
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/elt_re_order"
+                    style="@style/expandViewStandard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:id="@+id/rg_re_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            style="@style/standardRadio"
+                            android:id="@+id/rb_re_order_distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/re_order_distance"/>
+
+                        <RadioButton
+                            style="@style/standardRadio"
+                            android:id="@+id/rb_re_order_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/re_order_name"/>
+
+                    </RadioGroup>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+                <LinearLayout
+                    style="@style/standardLtt"
+                    android:id="@+id/llt_filter"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/standardText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/filter" />
+
+                    <ImageView
+                        android:id="@+id/iv_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_arrow_right_small" />
+
+                </LinearLayout>
+
+                <View style="@style/line" />
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/elt_filter"
+                    style="@style/expandViewStandard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            style="@style/standardCheckBox"
+                            android:id="@+id/cb_open"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/open"/>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            style="@style/standardCheckBox"
+                            android:id="@+id/cb_rating_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rating_more_than_4"/>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            style="@style/standardCheckBox"
+                            android:id="@+id/cb_rating_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rating_more_than_3"/>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            style="@style/standardCheckBox"
+                            android:id="@+id/cb_rating_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rating_more_than_2"/>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            style="@style/standardCheckBox"
+                            android:id="@+id/cb_rating_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rating_more_than_1"/>
+
+                    </LinearLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+</RelativeLayout>

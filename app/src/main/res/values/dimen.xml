@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standardTextSize">14sp</dimen>
+    <dimen name="standardTitleTextSize">18sp</dimen>
+    <dimen name="standardPadding">4dp</dimen>
+    <dimen name="standardDialogMainMargin">12dp</dimen>
+    <dimen name="standardDialogRadius">12dp</dimen>
+    <dimen name="standardDialogMainPadding">8dp</dimen>
+    <dimen name="standardBtnRadius">8dp</dimen>
+    <dimen name="standardBtnTextSize">16sp</dimen>
+
+    <dimen name="nameListMargin">32dp</dimen>
+</resources>
